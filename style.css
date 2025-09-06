@@ -28,14 +28,20 @@ body {
 }
 
 body::before {
-  content: url("assets/images/background-pattern-desktop.svg");
+  /* content: url("assets/images/background-pattern-desktop.svg"); */
   position: absolute;
   z-index: -1;
+  background-image: url("assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-
+  top: 0;
+  left: 0;
+  height: 318px;
+  content: "";
   @media (width < 375px) {
-    content: url("assets/images/background-pattern-mobile.svg");
-    width: 100%;
+    background-image: url("assets/images/background-pattern-mobile.svg");
+    height: 240px;
   }
 }
 
